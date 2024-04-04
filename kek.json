@@ -1,0 +1,40 @@
+{
+    "playerName": "LandonPierce",
+    "avatarName": "IOI-987655",
+    "level": 15,
+    "points": 35000,
+    "inventory": {
+        "items": [
+            {"name": "bronze key", "quantity": 1},
+            {"name": "silver amulet", "quantity": 0},
+            {"name": "IOI-Upgrade", "quantity": 0}
+        ],
+        "currency": {"name": "IOI Coin", "quantity": 2000}
+    },
+    "questsCompleted": [
+        "Hunt the Bronze Key"
+    ],
+    "highScores": [
+        {"score": 25000, "date": "2022-12-01"},
+        {"score": 30000, "date": "2022-11-15"},
+        {"score": 35000, "date": "2022-11-01"}
+    ],
+    "options": {
+        "difficulty": "normal",
+        "graphicsQuality": "high",
+        "soundVolume": 0.8
+    },
+    "IOI_Rig_data": {
+        "rig_name": "IOI-Standard",
+        "rig_serial_number": "IOI-Standard-S-2022-03",
+        "rig_features": ["save-state", "load-state"]
+    },
+    "suit_details": {
+        "name": "Landon Pierce suit",
+        "type": "power suit",
+        "features": ["shield"],
+        "upgrades": [
+            {"name": "shield upgrade", "level": 1}
+        ]
+    }
+}
