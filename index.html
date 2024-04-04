@@ -1,15 +1,15 @@
 <html>
     <body>
 
-        ver 10
+        ver 11
 
  <div id="file1">kek</div>
  <div id="file2">kek</div>
  <div id="file3">kek</div>
     <script>
-        const el = document.getElementById('file1');
+        const el1 = document.getElementById('file1');
         function reqListener () {
-            el.innerHTML = this.responseText;
+            el1.innerHTML = this.responseText;
         }
 
         var oReq = new XMLHttpRequest();
@@ -19,9 +19,9 @@
     </script> 
 
     <script>
-        const el = document.getElementById('file2');
+        const el2 = document.getElementById('file2');
         function reqListener () {
-            el.innerHTML = this.responseText;
+            el2.innerHTML = this.responseText;
         }
 
         var oReq = new XMLHttpRequest();
